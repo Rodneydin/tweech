@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect, useRef } from 'react';
-import {client} from '../sanity/lib/client';
+import { useRouter } from 'next/router';
+import { client } from '../sanity/lib/client';
 import '../styles/globals.css';
 import Logo from '../dist/logo.png'
 import PostsComponent from '../components/Post';
@@ -10,12 +11,12 @@ import { useSelector } from 'react-redux';
 const Home = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [data, setData] = useState([]);
+  const router = useRouter();
+  const { user } = useSelector((state) => state.user);
 
   const handleOpenSidebar = () => {
-    setIsSidebarOpen(true); 
+    setIsSidebarOpen(true);
   };
-  const {user} = useSelector((state) => state.user);
-  console.log(user)
 
   const handleCloseSidebar = () => {
     setIsSidebarOpen(false);
@@ -26,16 +27,13 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetchUserData();
-  }, []);
-
-  {/*useEffect(() => {
-    const Profile = localStorage.getItem('Profile');
-    if (Profile && Profile !== 'undefined') {
-      const user = JSON.parse(Profile);
-      setProfile(user);
+    if (!user) {
+      // Redirect the user to the login page if user is undefined
+      router.push('/login');
+    } else {
+      fetchUserData();
     }
-  }, []);*/}
+  }, [user]);
 
   const fetchUserData = async () => {
     try {
@@ -52,24 +50,19 @@ const Home = () => {
       );
 
       setData(response);
-      
-      
     } catch (error) {
       console.error('Error fetching user data:', error);
     }
   };
 
- 
-console.log(data)
   return (
     <div className="container mx-auto min-h-screen mb-26" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
       <Image
-      src={Logo}
-      alt='tweecher logo'
-      className='bg=transparent h-20 w-auto'
-
+        src={Logo}
+        alt='tweecher logo'
+        className='bg=transparent h-20 w-auto'
       />
-      
+
       <div className="space-y-4 max-h-screen overflow-y-auto">
         {data?.map((post) => (
           <PostsComponent
@@ -86,7 +79,6 @@ console.log(data)
           />
         ))}
       </div>
-      
     </div>
   );
 };
