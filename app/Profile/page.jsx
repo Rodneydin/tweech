@@ -78,19 +78,20 @@ const ProfilePage = () => {
    router.push('/welcome')
   };
   const menuItems = [
-    {
-      label: "Posts",
-      content: [], // Add the content for Posts menu item
-    },
-    {
-      label: "Reposts",
-      content: [], // Add the content for Reposts menu item
-    },
-    {
-      label: "Direct Messages",
-      content: [], // Add the content for Direct Messages menu item
-    },
-  ];
+  {
+    label: "Posts",
+    content: profile.posts,
+  },
+  {
+    label: "Reposts",
+    content: profile.reposts,
+  },
+  {
+    label: "Direct Messages",
+    content: profile.directMessages,
+  },
+];
+
 
   const handleSaveProfile = async (updatedProfile) => {
     try {
