@@ -1,0 +1,268 @@
+[
+  {
+    "id": 1,
+    "username": "user1",
+    "name": "User One",
+    "followers_count": 100,
+    "following_count": 50,
+    "image": "https://images.pexels.com/photos/2010877/pexels-photo-2010877.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "tweets": [
+      {
+        "id": 1,
+        "text": "This is my first tweet!",
+        "timestamp": "2023-05-25T10:30:00Z",
+        "likes_count": 10,
+        "retweets_count": 2,
+        "comments": [
+          {
+            "id": 1,
+            "text": "Great first tweet!",
+            "timestamp": "2023-05-25T11:00:00Z"
+          }
+        ]
+      }
+    ],
+    "bio": [
+      {
+        "text": "Digital Goodies Team - Web and Mobile UI/UX development;Graphics; Illustrations",
+        "view": 2
+      }
+    ],
+    "tweetContent": "This is my first tweet!",
+    "repliesContent": "Great first tweet!",
+    "mediaContent": "<img src='https://images.pexels.com/photos/2010877/pexels-photo-2010877.jpeg?auto=compress&cs=tinysrgb&w=600' alt='User Media' className='w-40 h-40 rounded-full' />",
+    "likesContent": "Likes: 10",
+    "menuItems": [
+      {
+        "label": "Tweet",
+        "content": [
+          {
+            "text": "This is my first tweet!",
+            "replies": [
+              {
+                "text": "Great first tweet!"
+              }
+            ],
+            "likes_count": 10,
+            "retweets_count": 2
+          }
+        ]
+      },
+      {
+        "label": "Message",
+        "content": [
+          {
+            "text": "Sending you a message!"
+          }
+        ]
+      },
+      {
+        "label": "Follow",
+        "content": [
+          {
+            "text": "Follow me!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "username": "user2",
+    "name": "User Two",
+    "followers_count": 500,
+    "following_count": 100,
+    "image": "https://images.pexels.com/photos/2787341/pexels-photo-2787341.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "tweets": [
+      {
+        "id": 1,
+        "text": "Hello, Twitter!",
+        "timestamp": "2023-05-26T08:45:00Z",
+        "likes_count": 20,
+        "retweets_count": 4,
+        "comments": [
+          {
+            "id": 1,
+            "text": "Nice to meet you!",
+            "timestamp": "2023-05-26T09:00:00Z"
+          }
+        ]
+      }
+    ],
+    "bio": [
+      {
+        "text": "This is my first bio",
+        "view": 2
+      }
+    ],
+    "tweetContent": "Hello, Twitter!",
+    "repliesContent": "Nice to meet you!",
+    "mediaContent": "<img src='https://images.pexels.com/photos/2787341/pexels-photo-2787341.jpeg?auto=compress&cs=tinysrgb&w=600' alt='User Media' className='w-40 h-40 rounded-full' />",
+    "likesContent": "Likes: 20",
+    "menuItems": [
+      {
+        "label": "Tweet",
+        "content": [
+          {
+            "text": "Hello, Twitter!",
+            "replies": [
+              {
+                "text": "Nice to meet you!"
+              }
+            ],
+            "likes_count": 20,
+            "retweets_count": 4
+          }
+        ]
+      },
+      {
+        "label": "Message",
+        "content": [
+          {
+            "text": "Sending you a message!"
+          }
+        ]
+      },
+      {
+        "label": "Follow",
+        "content": [
+          {
+            "text": "Follow me!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "username": "user3",
+    "name": "User Three",
+    "followers_count": 200,
+    "following_count": 75,
+    "image": "https://images.pexels.com/photos/35537/child-children-girl-happy.jpg?auto=compress&cs=tinysrgb&w=600",
+    "tweets": [
+      {
+        "id": 1,
+        "text": "Feeling excited about this project!",
+        "timestamp": "2023-05-26T13:30:00Z",
+        "likes_count": 15,
+        "retweets_count": 3,
+        "comments": [
+          {
+            "id": 1,
+            "text": "Me too! Can't wait to get started.",
+            "timestamp": "2023-05-26T14:00:00Z"
+          },
+          {
+            "id": 2,
+            "text": "Good luck!",
+            "timestamp": "2023-05-26T14:15:00Z"
+          }
+        ]
+      }
+    ],
+    "bio": [
+      {
+        "text": "This is my first bio",
+        "view": 2
+      }
+    ],
+    "tweetContent": "Feeling excited about this project!",
+    "repliesContent": "Me too! Can't wait to get started.\n\nGood luck!",
+    "mediaContent": "<img src='https://images.pexels.com/photos/35537/child-children-girl-happy.jpg?auto=compress&cs=tinysrgb&w=600' alt='User Media' className='w-40 h-40 rounded-full' />",
+    "likesContent": "Likes: 15",
+    "menuItems": [
+      {
+        "label": "Tweet",
+        "content": [
+          {
+            "text": "Feeling excited about this project!",
+            "replies": [
+              {
+                "text": "Me too! Can't wait to get started."
+              },
+              {
+                "text": "Good luck!"
+              }
+            ],
+            "likes_count": 15,
+            "retweets_count": 3
+          }
+        ]
+      },
+      {
+        "label": "Message",
+        "content": [
+          {
+            "text": "Sending you a message!"
+          }
+        ]
+      },
+      {
+        "label": "Follow",
+        "content": [
+          {
+            "text": "Follow me!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "username": "user4",
+    "name": "User Four",
+    "followers_count": 350,
+    "following_count": 90,
+    "image": "https://images.pexels.com/photos/718978/pexels-photo-718978.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "tweets": [
+      {
+        "id": 1,
+        "text": "Just had a fantastic meal!",
+        "timestamp": "2023-05-26T19:00:00Z",
+        "likes_count": 8,
+        "retweets_count": 1,
+        "comments": []
+      }
+    ],
+    "bio": [
+      {
+        "text": "This is my first bio",
+        "view": 2
+      }
+    ],
+    "tweetContent": "Just had a fantastic meal!",
+    "repliesContent": "",
+    "mediaContent": "<img src='https://images.pexels.com/photos/718978/pexels-photo-718978.jpeg?auto=compress&cs=tinysrgb&w=600' alt='User Media' className='w-40 h-40 rounded-full' />",
+    "likesContent": "Likes: 8",
+    "menuItems": [
+      {
+        "label": "Tweet",
+        "content": [
+          {
+            "text": "Just had a fantastic meal!",
+            "replies": [],
+            "likes_count": 8,
+            "retweets_count": 1
+          }
+        ]
+      },
+      {
+        "label": "Message",
+        "content": [
+          {
+            "text": "Sending you a message!"
+          }
+        ]
+      },
+      {
+        "label": "Follow",
+        "content": [
+          {
+            "text": "Follow me!"
+          }
+        ]
+      }
+    ]
+  }
+]
