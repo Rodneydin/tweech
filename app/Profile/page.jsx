@@ -76,6 +76,13 @@ const ProfilePage = () => {
   const handleEditProfile = () => {
     // Handle edit profile
   };
+  menuItems=[
+    
+      "Posts",
+      'Reposts',
+       "Direct Messages"
+    
+  ]
 
   const handleSaveProfile = async (updatedProfile) => {
     try {
@@ -165,7 +172,7 @@ const ProfilePage = () => {
           </div>
 
           <ul className="flex justify-between font-bold">
-            {menuItems.map((item, index) => (
+            {menuItems?.map((item, index) => (
               <li
                 key={index}
                 className={`hover:underline cursor-pointer ${
