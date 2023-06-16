@@ -120,7 +120,7 @@ const ProfilePage = () => {
               alt="Profile-picture"
               className="rounded-full w-10 h-10 cursor-pointer"
             />
-            
+            {!editMode && (
               <button
                 className="px-4 py-2 bg-gradient-to-br from-blue-600 to-pink-600 text-white rounded-lg"
                 onClick={handleEditProfile}
@@ -134,7 +134,7 @@ const ProfilePage = () => {
 
       {user && (
         <div className="relative bg-black/10 p-5 mt-4">
-          {!editMode ? (
+         
             <>
               <h1 className="text-lg font-bold mb-2">{user.name}</h1>
               <span className="text-gray-500">@{user.username}</span>
@@ -145,7 +145,7 @@ const ProfilePage = () => {
                 </div>
               </div>
             </>
-        
+          
         </div>
       )}
 
