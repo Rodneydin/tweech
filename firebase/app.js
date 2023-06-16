@@ -4,7 +4,7 @@ import {getAuth} from 'firebase/auth'
 import 'firebase/firestore';
 const firebaseConfig = {
     apiKey:'AIzaSyAFvDWvbav1xvn3Vc5wBO2p6FBjtNDyNFE',
-    authDomain: 'picapp.firebaseapp.com',
+    authDomain: 'picapp-382618.firebaseapp.com',
     projectId:'picapp-382618',
     storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
