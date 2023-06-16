@@ -20,7 +20,7 @@ const ProfilePage = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
   const router=useRouter()
-
+console.log(user)
   const fetchUserData = async () => {
     try {
       const uid = profile?.uid;
