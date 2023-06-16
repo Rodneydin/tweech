@@ -4,8 +4,8 @@ import { apiVersion, dataset, projectId, useCdn,token } from '../env'
 
 export const client = createClient({
   apiVersion,
-  dataset,
-  projectId:'jzme8bpp',
+  projectId: projectId || 'jzme8bpp',
+  dataset: dataset || 'production',
   useCdn,
   token,
 })
