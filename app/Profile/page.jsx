@@ -195,7 +195,7 @@ const ProfilePage = () => {
             ))}
           </ul>
 
-          {menuItems.map((item, index) => (
+          {menuItems?.map((item, index) => (
             <div
               key={index}
               className={`border border-gray-300 rounded p-4 mb-4 ${
