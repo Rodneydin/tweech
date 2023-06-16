@@ -11,14 +11,15 @@ import {
 } from 'react-icons/fa';
 import { client } from '../../sanity/lib/client';
 import '../../styles/globals.css';
-import EditProfileForm from '../../components/EditProfile';
 import { setProfile } from '../../redux/features/profileSlice';
+import { useRouter } from 'next/navigation';
 
 const ProfilePage = () => {
   const [activeButtonIndex, setActiveButtonIndex] = useState(null);
   const profile = useSelector((state) => state.profile);
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
+  const router=useRouter()
 
   const fetchUserData = async () => {
     try {
@@ -53,7 +54,7 @@ const ProfilePage = () => {
   ;
 
   useEffect(() => {
-    fetchUserData();
+    fetchUserData()
   }, [profile?.uid]);
 
   const handleButtonClick = (index) => {
@@ -74,15 +75,22 @@ const ProfilePage = () => {
   };
 
   const handleEditProfile = () => {
-    // Handle edit profile
+   router.push('/welcome')
   };
-   const menuItems=[
-    
-      "Posts",
-      'Reposts',
-       "Direct Messages"
-    
-  ]
+  const menuItems = [
+    {
+      label: "Posts",
+      content: [], // Add the content for Posts menu item
+    },
+    {
+      label: "Reposts",
+      content: [], // Add the content for Reposts menu item
+    },
+    {
+      label: "Direct Messages",
+      content: [], // Add the content for Direct Messages menu item
+    },
+  ];
 
   const handleSaveProfile = async (updatedProfile) => {
     try {
