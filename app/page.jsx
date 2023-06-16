@@ -29,7 +29,7 @@ const Home = () => {
   useEffect(() => {
     if (!user) {
       // Redirect the user to the login page if user is undefined
-      router.push('/login');
+      router.push('/Login');
     } else {
       fetchUserData();
     }
