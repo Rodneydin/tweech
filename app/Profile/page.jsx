@@ -76,7 +76,7 @@ const ProfilePage = () => {
   const handleEditProfile = () => {
     // Handle edit profile
   };
-  menuItems=[
+   const menuItems=[
     
       "Posts",
       'Reposts',
