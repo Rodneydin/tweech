@@ -70,47 +70,54 @@ console.log(profile)
 
     fetchUsers();
   }, []);
-  const handleSendMessage = async (message) => {
-    try {
-      if (!selectedUser) {
-        console.error('Recipient not selected.');
-        return;
-      }
-      const newMessage = {
-        _type: 'directMessage',
-        id: uuidv4(),
-        text: message,
-        timestamp: new Date().toISOString(),
-        sender: {
-          _type: 'reference',
-          _ref: profile._id,
-        },
-        recipient: {
-          _type: 'reference',
-          _ref: selectedUser._id,
-        },
-      };
+  // ...
 
-      await client.create(newMessage);
+const handleSendMessage = (message) => {
+  try {
+    if (!selectedUser) {
+      console.error('Recipient not selected.');
+      return;
+    }
+    const newMessage = {
+      _type: 'directMessage',
+      id: uuidv4(),
+      text: message,
+      timestamp: new Date().toISOString(),
+      sender: {
+        _type: 'reference',
+        _ref: profile._id,
+      },
+      recipient: {
+        _type: 'reference',
+        _ref: selectedUser._id,
+      },
+    };
 
+    client.create(newMessage).then(() => {
       // Update the messages state with the new message
       setMessages((prevMessages) => [...prevMessages, newMessage]);
-    } catch (error) {
-      console.error('Error sending message:', error);
-    }
-  };
+    });
+  } catch (error) {
+    console.error('Error sending message:', error);
+  }
+};
 
-  const handleDeleteMessage = async (messageId) => {
-    try {
-      // Delete the message from Sanity
-      await client.delete(messageId);
-
+const handleDeleteMessage = (messageId) => {
+  try {
+    // Delete the message from Sanity
+    client.delete(messageId).then(() => {
       // Update the messages state by removing the deleted message
-      setMessages((prevMessages) => prevMessages.filter((message) => message._id !== messageId));
-    } catch (error) {
-      console.error('Error deleting message:', error);
-    }
-  };
+      setMessages((prevMessages) =>
+        prevMessages.filter((message) => message._id !== messageId)
+      );
+    });
+  } catch (error) {
+    console.error('Error deleting message:', error);
+  }
+};
+
+// ...
+
 
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
