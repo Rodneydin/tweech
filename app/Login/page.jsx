@@ -72,7 +72,7 @@ const LoginPage = () => {
       console.error(error);
     }
   };
-  
+  console.log(user)
   const handleAppleLogin = async () => {
     // Apple login logic
   };
